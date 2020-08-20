@@ -64,14 +64,14 @@ function AddForm(){
                             value={addMovie.title}
                             onChange={onChange}
                         />
-                        <label>Director: &nbsp; </label>
+                        <label>Actor: &nbsp; </label>
                         <input 
                             type="text"
                             name="stars"
                             value={addMovie.stars}
                             onChange={onChange}
                         />
-                        <button>Update Movies</button>
+                        <button>Add Movie</button>
                     </form>
                 </div>
             </div>

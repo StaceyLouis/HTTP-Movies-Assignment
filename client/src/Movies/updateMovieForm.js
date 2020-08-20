@@ -21,7 +21,7 @@ function UpdateForm(props) {
         .get(`http://localhost:5000/api/movies/${params.id}`)
         .then(res => {
             console.log(res.data)
-            setUpdate(res.data)
+            setForm(res.data)
         })
         .catch(err => {
             console.log(err)
