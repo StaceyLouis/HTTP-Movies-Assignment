@@ -30,16 +30,13 @@ function UpdateForm(props) {
 }, []);
 
 const onChange = (e) =>{
-    e.persist();
-    if(e.target.name === 'stars'){
-        e.target.value = e.target.value.split(',')
-    }
     setForm({
         ...form,
         [e.target.name]: [e.target.value]
     })
 }
 const onSubmit= (e) =>{
+    e.preventDefault()
     axios
     .put(`http://localhost:5000/api/movies/${form.id}`, form)
     .then(res => {
